@@ -3,81 +3,526 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Josue</title>
+    <title>Josue - Desarrollador Discord & Bot Developer</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Josue<span class="logo-dot">.</span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-    <header>
-        <h1>¡Hola! Soy <span class="nombre">Josue</span></h1>
-        <p>Configurador de Discord & Desarrollador de Bots</p>
-        <a href="#contacto" class="boton">Contáctame</a>
-    </header>
-
-    <section id="sobre-mi">
-        <h2>Sobre Mí</h2>
-        <p>Soy configurador de Discord con más de 2 años de experiencia. Desarrollo bots en Node.js, Python y Java.</p>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>¡Hola! Soy <span class="nombre">Josue</span></h1>
+                    <div class="typing-container">
+                        <span class="typing-text"></span>
+                    </div>
+                    <p class="hero-description">
+                        Especialista en Discord con +2 años de experiencia. Desarrollo bots avanzados 
+                        y configuro servidores profesionales que transforman comunidades.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                        <a href="#contacto" class="btn btn-secondary">Contáctame</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="50">0</span>
+                            <span class="stat-label">Bots Creados</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="100">0</span>
+                            <span class="stat-label">Servidores Configurados</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="2">0</span>
+                            <span class="stat-label">Años de Experiencia</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-card">
+                        <i class="fab fa-discord"></i>
+                        <span>Discord Expert</span>
+                    </div>
+                    <div class="floating-card">
+                        <i class="fas fa-robot"></i>
+                        <span>Bot Developer</span>
+                    </div>
+                    <div class="floating-card">
+                        <i class="fas fa-code"></i>
+                        <span>Full Stack</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
     </section>
 
-    <section id="proyectos">
-        <h2>Proyectos</h2>
-        <div class="proyecto">
-            <h3>🎟️ Bot de Tickets Avanzado</h3>
-            <p>Tickets con reseñas integradas y sistema automatizado.</p>
-        </div>
-        <div class="proyecto">
-            <h3>📜 Bot de Vouches</h3>
-            <p>Registra vouches automáticamente y muestra reputaciones.</p>
-        </div>
-        <div class="proyecto">
-            <h3>🛡️ Bot de Moderación</h3>
-            <p>Automatiza la seguridad con comandos avanzados.</p>
-        </div>
-        <div class="proyecto">
-            <h3>🚨 Bot Anti-Raid</h3>
-            <p>Protege tu servidor contra ataques de spam y raids.</p>
-        </div>
-        <div class="proyecto">
-            <h3>🤖 Bot con IA</h3>
-            <p>Un bot inteligente que responde con AI y aprende.</p>
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sobre Mí</h2>
+                <p>Conoce más sobre mi experiencia y habilidades</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Soy un desarrollador especializado en Discord con más de 2 años de experiencia 
+                        creando soluciones innovadoras para comunidades online.
+                    </p>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <h4>Node.js</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <h4>Python</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-java"></i>
+                            <h4>Java</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-discord"></i>
+                            <h4>Discord API</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="bots-personalizados">
-        <h2>Bots Personalizados</h2>
-        <p>Ofrezco servicios de bots personalizados para servidores de Discord, con funcionalidades específicas adaptadas a tus necesidades.</p>
-        <ul>
-            <li><strong>Bot de Moderación</strong> - Automatiza tareas de seguridad y administración en tu servidor.</li>
-            <li><strong>Bot de Música</strong> - Reproduce música, playlists y mucho más.</li>
-            <li><strong>Bot de Votación</strong> - Organiza votaciones y encuestas en tu servidor.</li>
-            <li><strong>Bot de Bienvenida</strong> - Personaliza los mensajes de bienvenida y despide a los miembros automáticamente.</li>
-            <li><strong>Bot de Notificaciones</strong> - Envía alertas y notificaciones personalizadas a tu servidor.</li>
-        </ul>
-        <a href="#contacto" class="boton">Contáctame para más detalles</a>
+    <!-- Servicios -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mis Servicios</h2>
+                <p>Soluciones completas para tu servidor de Discord</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Bots Personalizados</h3>
+                    <p>Desarrollo bots únicos adaptados a las necesidades específicas de tu servidor.</p>
+                    <ul class="service-features">
+                        <li>Moderación Avanzada</li>
+                        <li>Sistemas de Música</li>
+                        <li>Integración con IA</li>
+                        <li>Comandos Personalizados</li>
+                    </ul>
+                    <div class="service-price">Desde $25</div>
+                </div>
+                <div class="service-card featured">
+                    <div class="service-badge">Más Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Configuración Completa</h3>
+                    <p>Setup completo de tu servidor con todas las funcionalidades profesionales.</p>
+                    <ul class="service-features">
+                        <li>Configuración de Roles</li>
+                        <li>Canales Organizados</li>
+                        <li>Sistemas de Seguridad</li>
+                        <li>Bots Integrados</li>
+                        <li>Soporte 24/7</li>
+                    </ul>
+                    <div class="service-price">Desde $50</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Consultoría & Soporte</h3>
+                    <p>Asesoramiento experto para optimizar y mantener tu servidor seguro.</p>
+                    <ul class="service-features">
+                        <li>Auditoría de Seguridad</li>
+                        <li>Optimización de Rendimiento</li>
+                        <li>Capacitación de Staff</li>
+                        <li>Soporte Técnico</li>
+                    </ul>
+                    <div class="service-price">Desde $15</div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="consultoria">
-        <h2>Consultoría</h2>
-        <p>Te ayudo a optimizar y configurar tu servidor de Discord, asegurando una experiencia segura, eficiente y Profecional</p>
-        <ul>
-            <li><strong>Optimización de Servidores</strong> - Ajustes y configuraciones para mejorar el rendimiento.</li>
-            <li><strong>Seguridad Avanzada</strong> - Protección contra ataques y vulnerabilidades.</li>
-            <li><strong>Asesoramiento en Bots</strong> - Personalización y desarrollo de bots a medida.</li>
-        </ul>
-        <a href="#contacto" class="boton">Contáctame para una consulta</a>
+    <!-- Proyectos -->
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Proyectos Destacados</h2>
+                <p>Algunos de mis trabajos más recientes</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>🎟️ Sistema de Tickets Avanzado</h3>
+                        <p>Bot completo con sistema de tickets, reseñas integradas y panel de administración web.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Discord.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Ver Demo</a>
+                            <a href="#contacto" class="project-link">Solicitar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>📜 Sistema de Vouches</h3>
+                        <p>Registra automáticamente reputaciones y vouches con verificación avanzada.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Discord.py</span>
+                            <span class="tech-tag">SQLite</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Ver Demo</a>
+                            <a href="#contacto" class="project-link">Solicitar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>🤖 Bot con Inteligencia Artificial</h3>
+                        <p>Bot inteligente que aprende y responde usando GPT-4 y procesamiento de lenguaje natural.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">OpenAI API</span>
+                            <span class="tech-tag">Redis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Ver Demo</a>
+                            <a href="#contacto" class="project-link">Solicitar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>🛡️ Sistema Anti-Raid Avanzado</h3>
+                        <p>Protección completa contra raids con detección automática y respuesta inteligente.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">JDA</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Ver Demo</a>
+                            <a href="#contacto" class="project-link">Solicitar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Contáctame en Discord: <strong>daniel2703_#3212</strong></p>
-        <a href="https://discord.gg/9qq6Sy2qvJ" class="boton">Unirme a Discord</a>
+    <!-- Testimonios -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lo Que Dicen Mis Clientes</h2>
+                <p>Testimonios reales de proyectos exitosos</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Josue transformó completamente nuestro servidor. El bot que creó es increíble y el soporte es excepcional."</p>
+                        <div class="testimonial-author">
+                            <strong>Alex M.</strong>
+                            <span>Administrador de Servidor Gaming</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Profesional, rápido y con excelente comunicación. El sistema de tickets funciona perfectamente."</p>
+                        <div class="testimonial-author">
+                            <strong>María S.</strong>
+                            <span>Community Manager</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Excelente trabajo en la configuración de nuestro servidor. Todo quedó perfecto y organizado."</p>
+                        <div class="testimonial-author">
+                            <strong>Carlos R.</strong>
+                            <span>Dueño de Comunidad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>© 2025 Josue - Todos los derechos reservados</p>
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Preguntas Frecuentes</h2>
+                <p>Resuelve tus dudas más comunes</p>
+            </div>
+            <div class="faq-container">
+               <div class="faq-item">
+    <div class="faq-question">
+        <h3>¿Cuánto tiempo toma desarrollar un bot personalizado?</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="faq-answer">
+        <p>El tiempo varía según la complejidad, pero generalmente entre 3-7 días para bots básicos y 1-2 semanas para proyectos avanzados.</p>
+    </div>
+</div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Ofrecen soporte después de la entrega?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, incluyo 30 días de soporte gratuito y mantenimiento básico. También ofrezco planes de soporte extendido.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Qué métodos de pago aceptan?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Acepto PayPal, transferencias bancarias y criptomonedas. Se requiere un 50% de adelanto para comenzar el proyecto.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Pueden hospedar el bot por mí?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, ofrezco servicios de hosting confiable con uptime del 99.9% por una tarifa mensual adicional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Listo para Empezar?</h2>
+                <p>Contáctame y transformemos tu servidor de Discord</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Discord</h3>
+                            <p>daniel2703_#3212</p>
+                            <a href="https://discord.gg/9qq6Sy2qvJ" class="contact-link">Unirse al Servidor</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>danielcerrato195@gmail.com</p>
+                            <a href="mailto:danielcerrato195@gmail.com" class="contact-link">Enviar Email</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Horario de Respuesta</h3>
+                            <p>24-48 horas</p>
+                            <span class="contact-link">Lun - Dom</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Tu Email" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Selecciona un Servicio</option>
+                                <option value="bot-personalizado">Bot Personalizado</option>
+                                <option value="configuracion-servidor">Configuración de Servidor</option>
+                                <option value="consultoria">Consultoría</option>
+                                <option value="soporte">Soporte Técnico</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Describe tu proyecto..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">Josue<span class="logo-dot">.</span></span>
+                    </div>
+                    <p>Desarrollador especializado en Discord con +2 años de experiencia creando soluciones innovadoras.</p>
+                    <div class="social-links">
+                        <a href="https://discord.gg/9qq6Sy2qvJ" class="social-link">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <ul class="footer-links">
+                        <li><a href="#servicios">Bots Personalizados</a></li>
+                        <li><a href="#servicios">Configuración de Servidores</a></li>
+                        <li><a href="#servicios">Consultoría</a></li>
+                        <li><a href="#servicios">Soporte Técnico</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#sobre-mi">Sobre Mí</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto Rápido</h3>
+                    <div class="footer-contact">
+                        <p><i class="fab fa-discord"></i> daniel2703_#3212</p>
+                        <p><i class="fas fa-envelope"></i> josue.discord@gmail.com</p>
+                        <p><i class="fas fa-clock"></i> Respuesta en 24-48h</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Josue - Todos los derechos reservados</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Términos de Servicio</a>
+                        <a href="#">Política de Privacidad</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <!-- Botón de scroll hacia arriba -->
+    <button id="scrollToTop" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
