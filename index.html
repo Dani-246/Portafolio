@@ -3,21 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Josue - Desarrollador Discord & Bot Developer</title>
+    <title>Josue - Desarrollador Web & Discord Bot Developer</title>
+    <meta name="description" content="Desarrollador especializado en páginas web, portafolios, landing pages y bots de Discord personalizados.">
+    <meta name="keywords" content="Desarrollador Web, HTML, CSS, JavaScript, Discord Bots, Portafolios, Landing Pages">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="logo-text">J<span class="logo-dot">.</span></span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-text">Cargando portafolio...</p>
+        </div>
+    </div>
+
     <!-- Navegación -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <span class="logo-text">Josue<span class="logo-dot">.</span></span>
             </div>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="#inicio" class="nav-link">Inicio</a></li>
                 <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
                 <li><a href="#servicios" class="nav-link">Servicios</a></li>
@@ -25,7 +43,7 @@
                 <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -35,54 +53,85 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
+        <div class="hero-bg-animation"></div>
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>¡Hola! Soy <span class="nombre">Josue</span></h1>
+                    <div class="hero-badge">
+                        <i class="fas fa-code"></i>
+                        <span>Desarrollador Web & Discord</span>
+                    </div>
+                    <h1>¡Hola! Soy <span class="nombre gradient-text">Josue</span></h1>
                     <div class="typing-container">
-                        <span class="typing-text"></span>
+                        <span id="typed-text"></span>
                     </div>
                     <p class="hero-description">
-                        Especialista en Discord con +2 años de experiencia. Desarrollo bots avanzados 
-                        y configuro servidores profesionales que transforman comunidades.
+                        Desarrollador especializado en crear páginas web atractivas, portafolios profesionales 
+                        y bots de Discord personalizados que realmente funcionan.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
-                        <a href="#contacto" class="btn btn-secondary">Contáctame</a>
+                        <a href="#proyectos" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            Ver Proyectos
+                        </a>
+                        <a href="#contacto" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Contáctame
+                        </a>
                     </div>
                     <div class="hero-stats">
                         <div class="stat">
-                            <span class="stat-number" data-target="50">0</span>
-                            <span class="stat-label">Bots Creados</span>
+                            <span class="stat-number" data-target="30">0</span>
+                            <span class="stat-label">Páginas Web Creadas</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number" data-target="100">0</span>
-                            <span class="stat-label">Servidores Configurados</span>
+                            <span class="stat-number" data-target="25">0</span>
+                            <span class="stat-label">Bots de Discord</span>
                         </div>
                         <div class="stat">
                             <span class="stat-number" data-target="2">0</span>
                             <span class="stat-label">Años de Experiencia</span>
                         </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="98">0</span>
+                            <span class="stat-label">% Satisfacción</span>
+                        </div>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <div class="floating-card">
-                        <i class="fab fa-discord"></i>
-                        <span>Discord Expert</span>
-                    </div>
-                    <div class="floating-card">
-                        <i class="fas fa-robot"></i>
-                        <span>Bot Developer</span>
-                    </div>
-                    <div class="floating-card">
-                        <i class="fas fa-code"></i>
-                        <span>Full Stack</span>
+                    <div class="hero-visual">
+                        <div class="floating-elements">
+                            <div class="floating-card web-card">
+                                <i class="fas fa-globe"></i>
+                                <span>Páginas Web</span>
+                            </div>
+                            <div class="floating-card portfolio-card">
+                                <i class="fas fa-user"></i>
+                                <span>Portafolios</span>
+                            </div>
+                            <div class="floating-card bot-card">
+                                <i class="fab fa-discord"></i>
+                                <span>Bots Discord</span>
+                            </div>
+                            <div class="floating-card code-card">
+                                <i class="fas fa-code"></i>
+                                <span>Programación</span>
+                            </div>
+                        </div>
+                        <div class="hero-avatar">
+                            <div class="avatar-glow"></div>
+                            <div class="avatar-content">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </div>
     </section>
 
@@ -91,42 +140,112 @@
         <div class="container">
             <div class="section-header">
                 <h2>Sobre Mí</h2>
-                <p>Conoce más sobre mi experiencia y habilidades</p>
+                <p>Desarrollador especializado en páginas web y bots de Discord</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-intro">
-                        Soy un desarrollador especializado en Discord con más de 2 años de experiencia 
-                        creando soluciones innovadoras para comunidades online.
-                    </p>
+                    <div class="about-intro">
+                        <h3>Desarrollador Web & Discord</h3>
+                        <p class="about-description">
+                            Me especializo en crear páginas web modernas y atractivas como portafolios, landing pages 
+                            y sitios personales. También desarrollo bots de Discord personalizados con funcionalidades 
+                            únicas para mejorar servidores y comunidades.
+                        </p>
+                    </div>
+                    
+                    <div class="experience-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>30+ Páginas Web</h4>
+                                <p>Portafolios y landing pages profesionales</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>25+ Bots de Discord</h4>
+                                <p>Bots personalizados y únicos</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>98% Satisfacción</h4>
+                                <p>Clientes felices con resultados</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-section">
+                    <h3>Tecnologías & Herramientas</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
-                            <i class="fab fa-node-js"></i>
-                            <h4>Node.js</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="90%"></div>
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <h4>Python</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-java"></i>
-                            <h4>Java</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-discord"></i>
-                            <h4>Discord API</h4>
+                            <h4>HTML5</h4>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="95%"></div>
                             </div>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <h4>CSS3</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="92%"></div>
+                            </div>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <h4>JavaScript</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88%"></div>
+                            </div>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <h4>Discord.js</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="96%"></div>
+                            </div>
+                            <span class="skill-percentage">96%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <h4>Node.js</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <h4>Python</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82%"></div>
+                            </div>
+                            <span class="skill-percentage">82%</span>
                         </div>
                     </div>
                 </div>
@@ -139,52 +258,62 @@
         <div class="container">
             <div class="section-header">
                 <h2>Mis Servicios</h2>
-                <p>Soluciones completas para tu servidor de Discord</p>
+                <p>Lo que puedo crear para ti</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-robot"></i>
+                        <i class="fas fa-globe"></i>
                     </div>
-                    <h3>Bots Personalizados</h3>
-                    <p>Desarrollo bots únicos adaptados a las necesidades específicas de tu servidor.</p>
+                    <h3>Páginas Web</h3>
+                    <p>Páginas web atractivas y funcionales para portafolios, landing pages y sitios personales con diseños modernos.</p>
                     <ul class="service-features">
-                        <li>Moderación Avanzada</li>
-                        <li>Sistemas de Música</li>
-                        <li>Integración con IA</li>
-                        <li>Comandos Personalizados</li>
+                        <li><i class="fas fa-check"></i> Portafolios Personales</li>
+                        <li><i class="fas fa-check"></i> Landing Pages</li>
+                        <li><i class="fas fa-check"></i> Páginas de Presentación</li>
+                        <li><i class="fas fa-check"></i> Diseño Responsivo</li>
+                        <li><i class="fas fa-check"></i> Animaciones CSS</li>
                     </ul>
-                    <div class="service-price">Desde $25</div>
+                    <div class="service-price">Desde <span class="price-amount">$30</span></div>
+                    <a href="#contacto" class="btn btn-primary">Solicitar Web</a>
                 </div>
+                
                 <div class="service-card featured">
-                    <div class="service-badge">Más Popular</div>
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
+                    <div class="service-badge">
+                        <i class="fas fa-crown"></i>
+                        Especialidad
                     </div>
-                    <h3>Configuración Completa</h3>
-                    <p>Setup completo de tu servidor con todas las funcionalidades profesionales.</p>
+                    <div class="service-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <h3>Bots de Discord</h3>
+                    <p>Bots personalizados para Discord con funcionalidades únicas, moderación automática y sistemas interactivos.</p>
                     <ul class="service-features">
-                        <li>Configuración de Roles</li>
-                        <li>Canales Organizados</li>
-                        <li>Sistemas de Seguridad</li>
-                        <li>Bots Integrados</li>
-                        <li>Soporte 24/7</li>
+                        <li><i class="fas fa-check"></i> Bots de Moderación</li>
+                        <li><i class="fas fa-check"></i> Sistemas de Música</li>
+                        <li><i class="fas fa-check"></i> Comandos Personalizados</li>
+                        <li><i class="fas fa-check"></i> Configuración de Servidor</li>
+                        <li><i class="fas fa-check"></i> Soporte Incluido</li>
                     </ul>
-                    <div class="service-price">Desde $50</div>
+                    <div class="service-price">Desde <span class="price-amount">$25</span></div>
+                    <a href="#contacto" class="btn btn-primary">Crear Bot</a>
                 </div>
+                
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-tools"></i>
                     </div>
-                    <h3>Consultoría & Soporte</h3>
-                    <p>Asesoramiento experto para optimizar y mantener tu servidor seguro.</p>
+                    <h3>Programación & Scripts</h3>
+                    <p>Scripts personalizados, automatización de tareas y pequeñas aplicaciones para resolver problemas específicos.</p>
                     <ul class="service-features">
-                        <li>Auditoría de Seguridad</li>
-                        <li>Optimización de Rendimiento</li>
-                        <li>Capacitación de Staff</li>
-                        <li>Soporte Técnico</li>
+                        <li><i class="fas fa-check"></i> Scripts de Automatización</li>
+                        <li><i class="fas fa-check"></i> Herramientas Simples</li>
+                        <li><i class="fas fa-check"></i> Web Scraping Básico</li>
+                        <li><i class="fas fa-check"></i> Calculadoras Web</li>
+                        <li><i class="fas fa-check"></i> Formularios Interactivos</li>
                     </ul>
-                    <div class="service-price">Desde $15</div>
+                    <div class="service-price">Desde <span class="price-amount">$20</span></div>
+                    <a href="#contacto" class="btn btn-primary">Solicitar Script</a>
                 </div>
             </div>
         </div>
@@ -195,78 +324,260 @@
         <div class="container">
             <div class="section-header">
                 <h2>Proyectos Destacados</h2>
-                <p>Algunos de mis trabajos más recientes</p>
+                <p>Algunos de mis trabajos recientes</p>
             </div>
-            <div class="projects-grid">
-                <div class="project-card">
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="web">Páginas Web</button>
+                <button class="filter-btn" data-filter="bot">Bots Discord</button>
+                <button class="filter-btn" data-filter="script">Scripts</button>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Proyecto 1: Portafolio -->
+                <div class="project-card" data-category="web">
                     <div class="project-image">
-                        <i class="fas fa-ticket-alt"></i>
+                        <i class="fas fa-user"></i>
+                        <div class="project-overlay">
+                            <div class="project-status">
+                                <span class="status-badge completed">Completado</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>🎟️ Sistema de Tickets Avanzado</h3>
-                        <p>Bot completo con sistema de tickets, reseñas integradas y panel de administración web.</p>
+                        <h3>💼 Portafolio Profesional</h3>
+                        <p>Portafolio personal moderno con animaciones, secciones interactivas y diseño responsivo para mostrar trabajos y habilidades.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Animaciones</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>100% Responsivo</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-clock"></i>
+                                <span>3 días</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link demo-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Ver Demo
+                            </a>
+                            <a href="#contacto" class="project-link">
+                                <i class="fas fa-code"></i>
+                                Solicitar Similar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2: Landing Page -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <i class="fas fa-rocket"></i>
+                        <div class="project-overlay">
+                            <div class="project-status">
+                                <span class="status-badge featured">Destacado</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>🚀 Landing Page Moderna</h3>
+                        <p>Landing page atractiva con formularios de contacto, secciones informativas y efectos visuales profesionales.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Formularios</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-eye"></i>
+                                <span>Diseño único</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-clock"></i>
+                                <span>2 días</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link demo-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Ver Demo
+                            </a>
+                            <a href="#contacto" class="project-link">
+                                <i class="fas fa-code"></i>
+                                Solicitar Similar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3: Bot Discord -->
+                <div class="project-card" data-category="bot">
+                    <div class="project-image">
+                        <i class="fab fa-discord"></i>
+                        <div class="project-overlay">
+                            <div class="project-status">
+                                <span class="status-badge completed">Completado</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>🤖 Bot de Moderación</h3>
+                        <p>Bot completo para moderación automática con sistema de warnings, mute temporal y comandos de administración.</p>
+                        <div class="project-tech">
                             <span class="tech-tag">Discord.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Ver Demo</a>
-                            <a href="#contacto" class="project-link">Solicitar</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>📜 Sistema de Vouches</h3>
-                        <p>Registra automáticamente reputaciones y vouches con verificación avanzada.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Discord.py</span>
-                            <span class="tech-tag">SQLite</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Ver Demo</a>
-                            <a href="#contacto" class="project-link">Solicitar</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>🤖 Bot con Inteligencia Artificial</h3>
-                        <p>Bot inteligente que aprende y responde usando GPT-4 y procesamiento de lenguaje natural.</p>
-                        <div class="project-tech">
                             <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">OpenAI API</span>
-                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">JSON Database</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-users"></i>
+                                <span>500+ usuarios</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-clock"></i>
+                                <span>1 semana</span>
+                            </div>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Ver Demo</a>
-                            <a href="#contacto" class="project-link">Solicitar</a>
+                            <a href="#" class="project-link demo-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Ver Demo
+                            </a>
+                            <a href="#contacto" class="project-link">
+                                <i class="fas fa-code"></i>
+                                Solicitar Similar
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+
+                <!-- Proyecto 4: Calculadora Web -->
+                <div class="project-card" data-category="script">
                     <div class="project-image">
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-calculator"></i>
+                        <div class="project-overlay">
+                            <div class="project-status">
+                                <span class="status-badge new">Nuevo</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>🛡️ Sistema Anti-Raid Avanzado</h3>
-                        <p>Protección completa contra raids con detección automática y respuesta inteligente.</p>
+                        <h3>🧮 Calculadora Interactiva</h3>
+                        <p>Calculadora web con interfaz moderna, operaciones avanzadas y historial de cálculos para uso diario.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">JDA</span>
-                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Mobile First</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-clock"></i>
+                                <span>1 día</span>
+                            </div>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Ver Demo</a>
-                            <a href="#contacto" class="project-link">Solicitar</a>
+                            <a href="#" class="project-link demo-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Ver Demo
+                            </a>
+                            <a href="#contacto" class="project-link">
+                                <i class="fas fa-code"></i>
+                                Solicitar Similar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 5: Bot de Música -->
+                <div class="project-card" data-category="bot">
+                    <div class="project-image">
+                        <i class="fas fa-music"></i>
+                        <div class="project-overlay">
+                            <div class="project-status">
+                                <span class="status-badge completed">Completado</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>🎵 Bot de Música</h3>
+                        <p>Bot de música para Discord con cola de reproducción, controles avanzados y soporte para múltiples plataformas.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Discord.js</span>
+                            <span class="tech-tag">YouTube API</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-music"></i>
+                                <span>Multi-plataforma</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-clock"></i>
+                                <span>5 días</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link demo-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Ver Demo
+                            </a>
+                            <a href="#contacto" class="project-link">
+                                <i class="fas fa-code"></i>
+                                Solicitar Similar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 6: Página de Presentación -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <i class="fas fa-presentation"></i>
+                        <div class="project-overlay">
+                            <div class="project-status">
+                                <span class="status-badge completed">Completado</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>📄 Página de Presentación</h3>
+                        <p>Sitio web elegante para presentar servicios personales con galería, testimonios y formulario de contacto integrado.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">ScrollReveal</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-paint-brush"></i>
+                                <span>Diseño único</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-clock"></i>
+                                <span>2 días</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link demo-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Ver Demo
+                            </a>
+                            <a href="#contacto" class="project-link">
+                                <i class="fas fa-code"></i>
+                                Solicitar Similar
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -281,59 +592,112 @@
                 <h2>Lo Que Dicen Mis Clientes</h2>
                 <p>Testimonios reales de proyectos exitosos</p>
             </div>
-            <div class="testimonials-slider">
+            <div class="testimonials-slider" id="testimonials-slider">
                 <div class="testimonial-card active">
                     <div class="testimonial-content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                        <div class="client-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">5.0/5</span>
                         </div>
-                        <p>"Josue transformó completamente nuestro servidor. El bot que creó es increíble y el soporte es excepcional."</p>
+                        <blockquote>
+                            "Mi portafolio personal quedó increíble. Diseño moderno, animaciones suaves y totalmente responsivo. Ahora recibo más contactos profesionales."
+                        </blockquote>
                         <div class="testimonial-author">
-                            <strong>Alex M.</strong>
-                            <span>Administrador de Servidor Gaming</span>
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <strong>María Rodriguez</strong>
+                                <span>Diseñadora Gráfica</span>
+                                <div class="author-verified">
+                                    <i class="fas fa-check-circle"></i>
+                                    Cliente Verificado
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                        <div class="client-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">5.0/5</span>
                         </div>
-                        <p>"Profesional, rápido y con excelente comunicación. El sistema de tickets funciona perfectamente."</p>
+                        <blockquote>
+                            "El bot de Discord que creó para nuestro servidor gaming es perfecto. Moderación automática y comandos súper útiles. Excelente trabajo."
+                        </blockquote>
                         <div class="testimonial-author">
-                            <strong>María S.</strong>
-                            <span>Community Manager</span>
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <strong>Alex Gaming</strong>
+                                <span>Admin de Servidor Discord</span>
+                                <div class="author-verified">
+                                    <i class="fas fa-check-circle"></i>
+                                    Cliente Verificado
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-
-                            <i class="fas fa-star"></i>
+                        <div class="client-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">5.0/5</span>
                         </div>
-                        <p>"Excelente trabajo en la configuración de nuestro servidor. Todo quedó perfecto y organizado."</p>
+                        <blockquote>
+                            "La landing page que hizo para mi negocio local es exactamente lo que necesitaba. Simple, elegante y funciona perfecto en el móvil."
+                        </blockquote>
                         <div class="testimonial-author">
-                            <strong>Carlos R.</strong>
-                            <span>Dueño de Comunidad</span>
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <strong>Carlos Silva</strong>
+                                <span>Emprendedor Local</span>
+                                <div class="author-verified">
+                                    <i class="fas fa-check-circle"></i>
+                                    Cliente Verificado
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="testimonial-dots">
-                <span class="dot active" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+            <div class="testimonial-navigation">
+                <button class="testimonial-nav-btn prev-btn" id="prevTestimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="testimonial-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+                <button class="testimonial-nav-btn next-btn" id="nextTestimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -343,43 +707,56 @@
         <div class="container">
             <div class="section-header">
                 <h2>Preguntas Frecuentes</h2>
-                <p>Resuelve tus dudas más comunes</p>
+                <p>Dudas comunes sobre mis servicios</p>
             </div>
             <div class="faq-container">
-               <div class="faq-item">
-    <div class="faq-question">
-        <h3>¿Cuánto tiempo toma desarrollar un bot personalizado?</h3>
-        <i class="fas fa-chevron-down"></i>
-    </div>
-    <div class="faq-answer">
-        <p>El tiempo varía según la complejidad, pero generalmente entre 3-7 días para bots básicos y 1-2 semanas para proyectos avanzados.</p>
-    </div>
-</div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>¿Ofrecen soporte después de la entrega?</h3>
+                        <h3>¿Cuánto tiempo toma hacer una página web?</h3>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Sí, incluyo 30 días de soporte gratuito y mantenimiento básico. También ofrezco planes de soporte extendido.</p>
+                        <p>Para páginas simples: 1-3 días. Portafolios: 3-5 días. Landing pages con animaciones: 2-4 días. Todo depende de la complejidad del diseño.</p>
                     </div>
                 </div>
+                
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>¿Qué métodos de pago aceptan?</h3>
+                        <h3>¿El formulario de contacto realmente me envía emails?</h3>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Acepto PayPal, transferencias bancarias y criptomonedas. Se requiere un 50% de adelanto para comenzar el proyecto.</p>
+                        <p>No, es solo visual para demostración. Para contactarme usa Discord (daniel2703_) o email directo (danielcerrato195@gmail.com). Respondo en 12-24 horas.</p>
                     </div>
                 </div>
+                
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>¿Pueden hospedar el bot por mí?</h3>
+                        <h3>¿Qué incluye el desarrollo de una página web?</h3>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Sí, ofrezco servicios de hosting confiable con uptime del 99.9% por una tarifa mensual adicional.</p>
+                        <p>Diseño responsivo, código limpio, animaciones básicas, formularios funcionales, optimización móvil y 15 días de soporte para ajustes menores.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Cuánto cuesta un bot de Discord básico?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Bots básicos desde $25. Bots con moderación: $35-50. Bots complejos con música y sistemas avanzados: $60-80. Precios según funcionalidades.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Qué métodos de pago aceptas?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>PayPal, transferencias bancarias. Trabajo con 50% adelanto y 50% al entregar. Para proyectos pequeños ($25-50) puedo trabajar con pago completo al entregar.</p>
                     </div>
                 </div>
             </div>
@@ -390,63 +767,131 @@
     <section id="contacto" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2>¿Listo para Empezar?</h2>
-                <p>Contáctame y transformemos tu servidor de Discord</p>
+                <h2>¿Listo para tu Proyecto?</h2>
+                <p>Contáctame directamente por Discord o email</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-discord"></i>
+                    <div class="contact-intro">
+                        <h3>Hablemos de tu idea</h3>
+                        <p>¿Necesitas una página web, portafolio o bot de Discord? Contáctame directamente y conversemos sobre tu proyecto.</p>
+                    </div>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Discord (Recomendado)</h4>
+                                <p class="contact-value">daniel2703_</p>
+                                <a href="https://discord.gg/9qq6Sy2qvJ" class="contact-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Unirse al Servidor
+                                </a>
+                            </div>
                         </div>
-                        <div class="contact-details">
-                            <h3>Discord</h3>
-                            <p>daniel2703_#3212</p>
-                            <a href="https://discord.gg/9qq6Sy2qvJ" class="contact-link">Unirse al Servidor</a>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p class="contact-value">danielcerrato195@gmail.com</p>
+                                <a href="mailto:danielcerrato195@gmail.com?subject=Consulta%20de%20Proyecto" class="contact-link">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Enviar Email
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Tiempo de Respuesta</h4>
+                                <p class="contact-value">12-24 horas</p>
+                                <span class="contact-link">
+                                    <i class="fas fa-calendar"></i>
+                                    Disponible todos los días
+                                </span>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p>danielcerrato195@gmail.com</p>
-                            <a href="mailto:danielcerrato195@gmail.com" class="contact-link">Enviar Email</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Horario de Respuesta</h3>
-                            <p>24-48 horas</p>
-                            <span class="contact-link">Lun - Dom</span>
+                    
+                    <div class="contact-guarantee">
+                        <div class="guarantee-badge">
+                            <i class="fas fa-info-circle"></i>
+                            <div class="guarantee-text">
+                                <strong>Garantía de Respuesta</strong>
+                                <p>Te responderé en menos de 24 horas con una cotización detallada.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
+                
+                <div class="contact-form-container">
+                    <div class="form-header">
+                        <h3>Solicita tu Cotización</h3>
+                        <p>Completa el formulario y recibirás una respuesta en tu email en 24 horas</p>
+                    </div>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nombre Completo</label>
+                                <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Tu Email" required>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="service">Tipo de Servicio</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Selecciona un Servicio</option>
+                                    <option value="portafolio">Portafolio Personal</option>
+                                    <option value="landing-page">Landing Page</option>
+                                    <option value="pagina-presentacion">Página de Presentación</option>
+                                    <option value="bot-discord">Bot de Discord</option>
+                                    <option value="script-personalizado">Script Personalizado</option>
+                                    <option value="calculadora-web">Calculadora Web</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="budget">Presupuesto</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Selecciona tu presupuesto</option>
+                                    <option value="20-40">$20 - $40</option>
+                                    <option value="40-60">$40 - $60</option>
+                                    <option value="60-100">$60 - $100</option>
+                                    <option value="consultar">A consultar</option>
+                                </select>
+                            </div>
                         </div>
+                        
                         <div class="form-group">
-                            <select id="service" name="service" required>
-                                <option value="">Selecciona un Servicio</option>
-                                <option value="bot-personalizado">Bot Personalizado</option>
-                                <option value="configuracion-servidor">Configuración de Servidor</option>
-                                <option value="consultoria">Consultoría</option>
-                                <option value="soporte">Soporte Técnico</option>
-                            </select>
+                            <label for="message">Descripción del Proyecto</label>
+                            <textarea id="message" name="message" placeholder="Describe qué necesitas: tipo de página, colores preferidos, funcionalidades, etc." rows="5" required></textarea>
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Describe tu proyecto..." rows="5" required></textarea>
+                        
+                        <div class="form-footer">
+                            <div class="form-note">
+                                <i class="fas fa-info-circle"></i>
+                                <span>📧 Te responderé directamente a tu email en menos de 24 horas</span>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Enviar Solicitud</span>
+                                <div class="btn-loading">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                </div>
+                            </button>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
                     </form>
                 </div>
             </div>
@@ -457,60 +902,74 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
+                <div class="footer-section footer-main">
                     <div class="footer-logo">
                         <span class="logo-text">Josue<span class="logo-dot">.</span></span>
                     </div>
-                    <p>Desarrollador especializado en Discord con +2 años de experiencia creando soluciones innovadoras.</p>
+                    <p class="footer-description">
+                        Desarrollador especializado en páginas web modernas y bots de Discord personalizados. 
+                        Creo soluciones simples pero efectivas.
+                    </p>
                     <div class="social-links">
-                        <a href="https://discord.gg/9qq6Sy2qvJ" class="social-link">
+                        <a href="https://discord.gg/9qq6Sy2qvJ" class="social-link discord" target="_blank" aria-label="Discord">
                             <i class="fab fa-discord"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link github" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link twitter" aria-label="Twitter">
                             <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-linkedin"></i>
                         </a>
                     </div>
                 </div>
+                
                 <div class="footer-section">
                     <h3>Servicios</h3>
                     <ul class="footer-links">
-                        <li><a href="#servicios">Bots Personalizados</a></li>
-                        <li><a href="#servicios">Configuración de Servidores</a></li>
-                        <li><a href="#servicios">Consultoría</a></li>
-                        <li><a href="#servicios">Soporte Técnico</a></li>
+                        <li><a href="#servicios">Páginas Web</a></li>
+                        <li><a href="#servicios">Portafolios</a></li>
+                        <li><a href="#servicios">Landing Pages</a></li>
+                        <li><a href="#servicios">Bots de Discord</a></li>
+                        <li><a href="#servicios">Scripts Personalizados</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
-                    <h3>Enlaces Rápidos</h3>
+                    <h3>Tecnologías</h3>
                     <ul class="footer-links">
-                        <li><a href="#sobre-mi">Sobre Mí</a></li>
-                        <li><a href="#proyectos">Proyectos</a></li>
-                        <li><a href="#testimonios">Testimonios</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#sobre-mi">HTML5 & CSS3</a></li>
+                        <li><a href="#sobre-mi">JavaScript</a></li>
+                        <li><a href="#sobre-mi">Discord.js</a></li>
+                        <li><a href="#sobre-mi">Node.js & Python</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
-                    <h3>Contacto Rápido</h3>
+                    <h3>Contacto</h3>
                     <div class="footer-contact">
-                        <p><i class="fab fa-discord"></i> daniel2703_#3212</p>
-                        <p><i class="fas fa-envelope"></i> josue.discord@gmail.com</p>
-                        <p><i class="fas fa-clock"></i> Respuesta en 24-48h</p>
+                        <div class="contact-quick-item">
+                            <i class="fab fa-discord"></i>
+                            <span>daniel2703_</span>
+                        </div>
+                        <div class="contact-quick-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>danielcerrato195@gmail.com</span>
+                        </div>
+                        <div class="contact-quick-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Respuesta rápida</span>
+                        </div>
                     </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <div class="footer-divider"></div>
                 <div class="footer-bottom-content">
-                    <p>&copy; 2025 Josue - Todos los derechos reservados</p>
+                    <p>&copy; 2025 Josue - Desarrollador Web & Discord. Todos los derechos reservados.</p>
                     <div class="footer-bottom-links">
-                        <a href="#">Términos de Servicio</a>
-                        <a href="#">Política de Privacidad</a>
+                        <a href="#" aria-label="Términos">Términos</a>
+                        <a href="#" aria-label="Privacidad">Privacidad</a>
                     </div>
                 </div>
             </div>
@@ -518,9 +977,13 @@
     </footer>
 
     <!-- Botón de scroll hacia arriba -->
-    <button id="scrollToTop" class="scroll-to-top">
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Cursor personalizado -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
 
     <!-- Scripts -->
     <script src="script.js"></script>
